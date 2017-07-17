@@ -3,7 +3,6 @@
 		<title>Leandra Solovay</title>
 		<style>
 			body {
-				display: flex;
 				font-family: 'gotham', 'helvetica', sans-serif;
 				margin: 0;
 				cursor: pointer;
@@ -11,6 +10,7 @@
 			.portfolio {
 				margin-top: auto;
 				margin-bottom: auto;
+				flex-direction: column;
 			}
 			h1 {
 				text-align: center;
@@ -66,13 +66,33 @@
 			  -ms-transform: translate(-50%, -50%);
 			}
 
+			@media (min-width: 1024px) {
+				body {
+					display: block;
+				}
+
+			  .portfolio {
+			  	display: flex;
+			  	flex-direction: row;
+			  	flex-wrap: wrap;
+			  	width: 66%;
+			  	margin-top: 15%;
+			  	margin-right: auto;
+			  	margin-left: auto;
+			  }
+
+			  .piece {
+			  	width: 28%;
+			  	margin-right: 30px;
+			  }
+			}
+
 
 		</style>
 	</head>
 
 	<body>
 		<div class='portfolio'>
-			<h1>I <3 harry potter</h1>
 			<div class='piece'>
 				<figure>
 					<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
