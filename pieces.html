@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Leandra Solovay</title>
+        <style>
+            body {
+                margin: 0;
+                cursor: pointer;
+                padding-top: 40px;
+            }
+
+            .piece {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              max-width: 650px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+
+            .title {
+              font-family: helvetica;
+              font-weight: bold;
+              margin-left: 20px;
+              margin-right: 20px;
+              font-size: 16px;
+            }
+
+            .blurb {
+              font-family: helvetica;
+              font-weight: bold;
+              margin-left: 20px;
+              margin-right: 20px;
+              font-size: 11px;
+            }
+
+            .portfolio {
+                margin-top: auto;
+                margin-bottom: auto;
+                flex-direction: column;
+            }
+
+            figure {
+                margin: 0;
+                width: 100%;
+                position: relative;
+                margin-bottom: 0px;
+                max-width: 650px;
+            }
+
+            figure > img {
+                display: block;
+                width: 100%;
+                height: auto;
+
+            }
+
+            @media (min-width: 720px) {
+
+              .piece {
+                flex-direction: row;
+              }
+
+              .description {
+                display: flex;
+                flex-direction: column;
+              }
+              .title {
+                margin-top: auto;
+              }
+
+              .blurb {
+                margin-bottom: auto;
+              }
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class='piece'>
+          <div class='description'>
+            <p class='title'>Luna Fest</p>
+            <p class='blurb'>I designed this poster for the musical Luna Fest</p>
+          </div>
+          <figure>
+            <img src='book3d.png'/>
+          </figure>
+    </body>
+</html>
