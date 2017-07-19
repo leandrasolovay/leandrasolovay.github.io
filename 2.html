@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>Leandra Solovay</title>
+		<script src="pointer.js"></script>
 		<style>
 			body {
 				font-family: 'gotham', 'helvetica', sans-serif;
@@ -67,23 +68,55 @@
 			}
 
 			@media (min-width: 1024px) {
+				#stretch {
+					width: 100px;
+					height: 100px;
+					background: pink;
+					position: absolute;
+					top: 0px;
+					left: 10px;
+				}
+
+				.handimg {
+					width: 100px;
+				}
+
 				body {
 					display: block;
+				}
+
+				.header {
+					width: auto;
+					height: 100vh;
 				}
 
 			  .portfolio {
 			  	display: flex;
 			  	flex-direction: row;
 			  	flex-wrap: wrap;
-			  	width: 66%;
-			  	margin-top: 15%;
+			  	width: 80%;
+			  	margin-top: 12%;
 			  	margin-right: auto;
 			  	margin-left: auto;
+			  	max-width: 1021px;
 			  }
 
 			  .piece {
-			  	width: 28%;
+			  	width: 30.3%;
 			  	margin-right: 30px;
+			  	max-width: 316px;
+			  }
+
+			  .piece:nth-child(3),
+			  .piece:nth-child(6) {
+			  	margin-right: 0;
+			  }
+
+			  .expanded-piece {
+			  	width: calc(100% - 90px);
+			  	background: wheat;
+			  	padding: 45px;
+			  	height: 100vh;
 			  }
 			}
 
@@ -92,49 +125,56 @@
 	</head>
 
 	<body>
-		<div class='portfolio'>
-			<div class='piece'>
-				<figure>
-					<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
-					<div class='overlay'></div>
-					<div class='text'>Design</div>
-				</figure>
-			</div>
-			<div class='piece'>
-				<figure>
-					<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
-					<div class='overlay'></div>
-					<div class='text'>The Double</div>
-				</figure>
-			</div>
-			<div class='piece'>
-				<figure>
-					<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
-					<div class='overlay'></div>
-					<div class='text'>Imposter</div>
-				</figure>
-			</div>
-			<div class='piece'>
-				<figure>
-					<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
-					<div class='overlay'></div>
-					<div class='text'>The Tourist</div>
-				</figure>
-			</div>
-			<div class='piece'>
-				<figure>
-					<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
-					<div class='overlay'></div>
-					<div class='text'>Mr. Director</div>
-				</figure>
-			</div>
-			<div class='piece'>
-				<figure>
-					<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
-					<div class='overlay'></div>
-					<div class='text'>Melted</div>
-				</figure>
+		<div id='stretch'><img id='handimg' class='handimg'src='hand.jpg' /></div>
+		<div class='header'>
+			<div class='portfolio'>
+				<div data-num='0' class='piece'>
+					<figure>
+						<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
+						<div class='overlay'></div>
+						<div class='text'>Design</div>
+					</figure>
+				</div>
+				<div data-num='1' class='piece'>
+					<figure>
+						<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
+						<div class='overlay'></div>
+						<div class='text'>The Double</div>
+					</figure>
+				</div>
+				<div class='piece'>
+					<figure>
+						<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
+						<div class='overlay'></div>
+						<div class='text'>Imposter</div>
+					</figure>
+				</div>
+				<div class='piece'>
+					<figure>
+						<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
+						<div class='overlay'></div>
+						<div class='text'>The Tourist</div>
+					</figure>
+				</div>
+				<div class='piece'>
+					<figure>
+						<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
+						<div class='overlay'></div>
+						<div class='text'>Mr. Director</div>
+					</figure>
+				</div>
+				<div class='piece'>
+					<figure>
+						<img src='http://www.horsechannel.com/images/horse-news-article-images/chestnut-horse-autumn_1000.jpg'>
+						<div class='overlay'></div>
+						<div class='text'>Melted</div>
+					</figure>
+				</div>
 			</div>
 		</div>
+		<div class='expanded-piece'>
+			<p>This is some amazing content</p>
+		</div>
 	</body>
+	<script src="pointer.js"></script>
 </html>
